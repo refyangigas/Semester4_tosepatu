@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SubcategoryController;
-use App\Http\Controllers\API\Apiauthcontroller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +26,5 @@ use Illuminate\Support\Facades\Route;
 //     ]);
 // });
 
-Route::post('/login', [authcontroller::class, 'login']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/register', [LoginController::class, 'register']);
